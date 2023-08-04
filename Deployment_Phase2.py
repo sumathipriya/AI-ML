@@ -1,5 +1,6 @@
-import pickle
-#Deployment Phase
-loaded_model =pickle.load(open("finalized_model_Mul_linear.sav",'rb'))
-result =loaded_model.predict([[1234,345,4565,1,0]])
+import  pickle
+#Deployement phase
+loaded_model = pickle.load(open("finalized_model_linear.sav",'rb'))
+#0 is origin or initial value or bias value,its the intial salary
+result =  loaded_model.predict([[0]])
 print(result)
